@@ -1,0 +1,13 @@
+{
+    "name": "Asteroids",
+    "version": "0.0.1",
+    "dependencies": {
+        "font-awesome": "latest",
+        "angular": "latest",
+        "bootstrap": "~3.0.3",
+        "angular-bootstrap": "~0.9.0",
+        "angular-ui": "latest",
+        "angular-ui-router": "latest",
+        "lodash": "2.4.1"
+    }
+}
