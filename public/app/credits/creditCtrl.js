@@ -1,6 +1,6 @@
 angular.module('game')
 
-.controller('aboutCtrl', ['$scope', function($scope) {
+.controller('creditCtrl', ['$scope', function($scope) {
 
   $scope.title = "Credits";
 

@@ -11,7 +11,7 @@
 <body ng-app="game">
 
 <!-- MAIN CONTENT -->
-<header ng-include="'tmpl/partial-header.html'"></header>
+<header ng-include="'app/nav/partial-header.html'"></header>
 <div class="container">
   <div ui-view></div>
 </div>
@@ -20,19 +20,18 @@
   <script src="libs/angular/angular.js"></script>
   <script src="libs/angular-ui/build/angular-ui.min.js"></script>
   <script src="libs/angular-ui-router/release/angular-ui-router.min.js"></script>
-  <script src="js/core.js"></script>
+  <script src="app/core.js"></script>
 
-  <script src="js/game/Renderer.js"></script>
-  <script src="js/game/Particles.js"></script>
-  <script src="js/game/Calc.js"></script>
-  <script src="js/game/Updater.js"></script>
+  <script src="app/game/Renderer.js"></script>
+  <script src="app/game/Particles.js"></script>
+  <script src="app/game/Calc.js"></script>
+  <script src="app/game/Updater.js"></script>
 
   <!-- Controllers -->
-  <script src="js/controllers/homeCtrl.js"></script>
-  <script src="js/controllers/scoreCtrl.js"></script>
-  <script src="js/controllers/aboutCtrl.js"></script>
-  <script src="js/controllers/gameCtrl.js"></script>
-
+  <script src="app/home/homeCtrl.js"></script>
+  <script src="app/scores/scoreCtrl.js"></script>
+  <script src="app/credits/creditCtrl.js"></script>
+  <script src="app/game/gameCtrl.js"></script>
 
 </body>
 </html>

@@ -8,22 +8,22 @@ angular.module('game', [
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: 'tmpl/partial-home.html',
+      templateUrl: 'app/home/partial-home.html',
       controller: 'homeCtrl'
     })
-    .state('about', {
-      url: '/about',
-      templateUrl: 'tmpl/partial-about.html',
-      controller: 'aboutCtrl'
+    .state('credits', {
+      url: '/credits',
+      templateUrl: 'app/credits/partial-credits.html',
+      controller: 'creditCtrl'
     })
     .state('scores', {
-      url: '/v1/high-scores',
-      templateUrl: 'tmpl/partial-score.html',
+      url: '/scores',
+      templateUrl: 'app/scores/partial-score.html',
       controller: 'scoreCtrl'
     })
     .state('game', {
       url: '/game',
-      templateUrl: 'tmpl/partial-game.html',
+      templateUrl: 'app/game/partial-game.html',
       controller: 'gameCtrl'
     })
 
