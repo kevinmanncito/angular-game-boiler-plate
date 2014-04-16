@@ -1,6 +1,6 @@
 angular.module('game')
 
-.controller('gameCtrl', ['$scope', '$http', function($scope, $http) {
+.controller('gameCtrl', ['$scope', '$http', 'Scores', function($scope, $http, Scores) {
   $scope.title = 'Choose a game type';
 
   $scope.lastTimeStamp = performance.now();

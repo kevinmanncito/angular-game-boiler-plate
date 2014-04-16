@@ -1,17 +1,10 @@
-angular.module('asteroids')
+angular.module('game')
 
-    .factory('Scores', ['$http', function($http) {
-        return {
-            get : function() {
-                return $http.get('/v1/high-scores').then(function(response) {
-                    return response.data;
-                });
-            },
-            create : function(scoreData) {
-                return $http.post('/v1/high-scores', scoreData);
-            },
-            delete : function(id) {
-                return $http.delete('/v1/high-scores/' + id);
-            }
-        }
-    }]);
+  .factory('Scores', ['$http', function($http) {
+    function get() {
+      return 'Score!';
+    }
+    return {
+      get : get
+    }
+  }]);
