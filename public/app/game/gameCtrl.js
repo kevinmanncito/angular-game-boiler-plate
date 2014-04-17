@@ -1,24 +1,39 @@
 angular.module('game')
 
-.controller('gameCtrl', ['$scope', '$http', function($scope, $http) {
-  $scope.title = 'Choose a game type';
+  .controller('gameCtrl', [
+      '$scope', 
+      '$location', 
+      'Updater', 
+      'Renderer', 
+      'Particles', 
+    function(
+      $scope, 
+      $location, 
+      Updater,
+      Renderer,
+      Particles
+  ) {
 
-  $scope.lastTimeStamp = performance.now();
-  // CANVAS ELEMENTS
-  $scope.canvas = document.getElementById('canvas');
-  $scope.context = $scope.canvas.getContext('2d');
 
+    $scope.title = 'Choose a game type';
 
-  gameLoop = function(time) {
-    elapsedTime = (time - $scope.lastTimeStamp) /1000;
-    $scope.lastTimeStamp = time;
-
-    Updater.update($scope, elapsedTime);
-    Renderer.render($scope);
+    $scope.lastTimeStamp = performance.now();
     
-    requestAnimationFrame(gameLoop);
-  }
-  
-  // requestAnimationFrame(gameLoop);
+    // CANVAS ELEMENTS
+    $scope.canvas = document.getElementById('canvas');
+    $scope.context = $scope.canvas.getContext('2d');
 
-}]);
+    gameLoop = function(time) {
+      elapsedTime = (time - $scope.lastTimeStamp) /1000;
+      $scope.lastTimeStamp = time;
+
+      Updater.update($scope, elapsedTime);
+      Renderer.render($scope);
+      
+      if ($location.url() === '/game')
+        requestAnimationFrame(gameLoop);
+    }
+    
+    // requestAnimationFrame(gameLoop);
+
+  }]);

@@ -1,10 +1,15 @@
 angular.module('game')
 
-.controller('scoreCtrl', ['$scope', 'Scores', function($scope, Scores) {
-  
-  $scope.scores = Scores.get();
-  console.log($scope.scores);
+  .controller('scoreCtrl', [
+      '$scope', 
+      'Scores', 
+    function(
+      $scope, 
+      Scores
+  ) {
+    
+    $scope.scores = Scores.get();
 
-  $scope.title = 'High Scores';
+    $scope.title = 'High Scores';
 
-}]);
+  }]);
